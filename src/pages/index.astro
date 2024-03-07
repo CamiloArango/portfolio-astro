@@ -1,23 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Experience from '../components/Experience.astro';
-import Project from '../components/Project.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Experience from "../components/Experience.astro";
+import Project from "../components/Project.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Hero socials={[
-			{ name: 'github', href: 'https://github.com' },
-			{ name: 'twitter', href: 'https://twitter.com' },
-			{ name: 'linkedin', href: 'https://linkedin.com' },
-		]} />
-		<Experience title='Experience' subtitle='Junior Developer Intern' institution='Start Panama' date="June - December 2023"/>
-		<Project 
-			title='Projects' 
-			subtitle='Filter App' 
-			info='This is a Flask web application that allows users to upload photos and apply virtual tape over the eyes in the uploaded images.' 
-			technologies={["github", "twitter", "linkedin"]} 
+		<Hero
+			socials={[
+				{ name: "github", href: "https://github.com" },
+				{ name: "twitter", href: "https://twitter.com" },
+				{ name: "linkedin", href: "https://linkedin.com" },
+			]}
+		/>
+		<Experience
+			title="Experience"
+			subtitle="Junior Developer Intern"
+			institution="Start Panama"
+			date="June - December 2023"
+		/>
+		<Project
+			title="Projects"
+			subtitle="Filter App"
+			info="This is a Flask web application that allows users to upload photos and apply virtual tape over the eyes in the uploaded images."
+			technologies={["github", "twitter", "linkedin"]}
 		/>
 	</main>
 </Layout>
