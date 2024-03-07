@@ -1,0 +1,55 @@
+---
+interface Props {
+	email: string;
+    tabs: {
+        name: string;
+        href: string;
+    }[];
+}
+
+const { email, tabs } = Astro.props;
+---
+
+<article class="text-slate-300 flex flex-col m-8">
+	<h2>{ email }</h2>
+	<ul class="flex flex-row">
+		{tabs.map((tab, index) => (
+			<li>
+				<a href={tab.href}>{tab.name}</a>
+				{index !== tabs.length - 1 && <span class="separator">/ </span>}
+			</li>
+		))}
+	</ul>
+</article>
+
+<style>
+	.separator {
+		white-space: pre;
+	}
+</style>
+
+<style>
+	@font-face {
+		font-family: 'Geist-UltraLight';
+		src: url('/fonts/Geist-UltraLight.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Geist-Medium';
+		src: url('/fonts/Geist-Medium.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	h2 {
+		font-family: 'Geist-UltraLight', sans-serif;
+	}
+
+	ul {
+		font-family: 'Geist-Medium', sans-serif;
+	}
+</style>
