@@ -4,15 +4,17 @@ import Socials from '../components/Socials.astro'
 
 <article class="text-slate-300 m-8 flex flex-col gap-7">
 	<h1 class="text-4xl">Hi, I'm Camilo!</h1>
-	<p>
-		As a self-taught full-stack developer with roots in Colombia and now calling Panama my home, I thrive on crafting exceptional digital experiences. My current toolkit features React, NextJS, and Astro for front-end development, ensuring sleek, fast, and SEO-friendly web applications.
-	</p>
-	<p>Equally passionate about automation, I harness Python to streamline processes, enhance efficiency, and innovate solutions that stand out.</p>
-	<Socials socials={[
-		{ name: "github", href: "https://github.com/CamiloArango" },
-		{ name: "twitter", href: "https://x.com/camandmxu" },
-		{ name: "linkedin", href: "www.linkedin.com/in/camiloarangoe" },
-	]}/>
+	<div class="border-2 border-purple-400 border-opacity-45 rounded-lg p-3 flex flex-col gap-3">
+		<p>
+			A self-taught <span class="text-purple-400">full-stack developer.</span> I thrive on crafting exceptional digital experiences. My current toolkit features <span class="text-purple-400">React, NextJS, and Astro</span> for front-end development, ensuring sleek, fast, and SEO-friendly web applications.
+		</p>
+		<p>Equally passionate about automation, I harness <span class="text-purple-400">Python</span> to streamline processes, enhance efficiency, and innovate solutions that stand out.</p>
+		<Socials socials={[
+			{ name: "github", href: "https://github.com/CamiloArango" },
+			{ name: "twitter", href: "https://x.com/camandmxu" },
+			{ name: "linkedin", href: "www.linkedin.com/in/camiloarangoe" },
+		]}/>
+	</div>
 </article>
 
 <style>

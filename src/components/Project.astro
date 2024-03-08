@@ -12,10 +12,9 @@ interface Props {
 const {href, subtitle, info, technologies, class: className } = Astro.props;
 ---
 
-<article class=`mx-8 ${className}`>
-	<a href={href}>
+<a href={href}>
+	<article class=`mx-8 border-2 border-purple-400 border-opacity-45 rounded-lg ${className} p-3 my-3 transition-all duration-300 hover:-translate-y-1`>
 		<h3>{subtitle}</h3>
-	</a>
 		<div class="text-slate-500">
 			<p>{info}</p>
 			<ul class="flex flex-row gap-2 my-1">
@@ -28,8 +27,8 @@ const {href, subtitle, info, technologies, class: className } = Astro.props;
 				}
 			</ul>
 		</div>
-</article>
-
+	</article>
+</a>
 <style>
 	h3 {
 		font-family: "Geist-Regular", sans-serif;
