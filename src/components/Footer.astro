@@ -1,0 +1,20 @@
+---
+import Socials from '../components/Socials.astro'
+---
+
+<footer class="mt-15 flex flex-col place-items-center border-t-2 border-primary pb-[2rem] pt-6 md:flex-row md:justify-between mx-8">
+	<a href="/">
+		<h3 class="text-xl text-slate-300">Camilo Arango</h3>
+	</a>
+  <Socials socials={[
+    { name: "github", href: "https://github.com/CamiloArango" },
+    { name: "twitter", href: "https://x.com/camandmxu" },
+    { name: "linkedin", href: "https://www.linkedin.com/in/camiloarangoe" },
+  ]}/>
+</footer>
+
+<style>
+	h3 {
+		font-family: "Geist-Regular", sans-serif;
+	}
+</style>

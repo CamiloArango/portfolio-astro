@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	socials: {
+		name: string;
+		href: string;
+	}[];
+}
+
+const { socials } = Astro.props;
+---
+
+<ul class="flex flex-row gap-4">
+		{
+			socials.map((social) => (
+				<li>
+					<a href={social.href} aria-label={social.name}>
+						<Icon name={social.name} class="text-slate-300 text-3xl" />
+					</a>
+				</li>
+			))
+		}
+</ul>
+
+<style>
+
+	h1 {
+		font-family: "Geist-Black", sans-serif;
+	}
+
+	p {
+		font-family: "Geist-Medium", sans-serif;
+	}
+</style>

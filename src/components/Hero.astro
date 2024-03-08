@@ -1,14 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
-
-interface Props {
-	socials: {
-		name: string;
-		href: string;
-	}[];
-}
-
-const { socials } = Astro.props;
+import Socials from '../components/Socials.astro'
 ---
 
 <article class="text-slate-300 m-8 flex flex-col gap-7">
@@ -18,35 +9,14 @@ const { socials } = Astro.props;
 		experiences. Originally from Colombia, I currently call Panama my home.
 	</p>
 	<p>Right now my focus is on React, NextJS and Astro.</p>
-	<ul class="flex flex-row gap-4">
-		{
-			socials.map((social) => (
-				<li>
-					<a href={social.href}>
-						<Icon name={social.name} class="text-slate-300 text-3xl" />
-					</a>
-				</li>
-			))
-		}
-	</ul>
+	<Socials socials={[
+		{ name: "github", href: "https://github.com/CamiloArango" },
+		{ name: "twitter", href: "https://x.com/camandmxu" },
+		{ name: "linkedin", href: "www.linkedin.com/in/camiloarangoe" },
+	]}/>
 </article>
 
 <style>
-	@font-face {
-		font-family: "Geist-Black";
-		src: url("/fonts/Geist-Black.woff2") format("woff2");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	@font-face {
-		font-family: "Geist-Medium";
-		src: url("/fonts/Geist-Medium.woff2") format("woff2");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
 
 	h1 {
 		font-family: "Geist-Black", sans-serif;

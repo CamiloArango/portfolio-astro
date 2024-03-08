@@ -1,16 +1,15 @@
 ---
 interface Props {
-	title: string;
 	subtitle: string;
 	institution: string;
 	date: string;
+	class?: string;
 }
 
-const { title, subtitle, institution, date } = Astro.props;
+const { subtitle, institution, date, class: className } = Astro.props;
 ---
 
-<article class="text-slate-300 m-8">
-	<h2 class="text-3xl">{title}</h2>
+<article class=`text-slate-300 mx-8 ${className}`>
 	<h3>{subtitle}</h3>
 	<div class="text-slate-500">
 		<h3>{institution}</h3>
@@ -19,22 +18,6 @@ const { title, subtitle, institution, date } = Astro.props;
 </article>
 
 <style>
-	@font-face {
-		font-family: "Geist-Regular";
-		src: url("/fonts/Geist-Regular.woff2") format("woff2");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	@font-face {
-		font-family: "Geist-Bold";
-		src: url("/fonts/Geist-Bold.woff2") format("woff2");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
 	h2 {
 		font-family: "Geist-Bold", sans-serif;
 	}

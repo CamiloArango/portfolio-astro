@@ -3,28 +3,43 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.astro";
 import Project from "../components/Project.astro";
+import Title from "../components/Title.astro";
+import Skills from "../components/Skills.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Hero
-			socials={[
-				{ name: "github", href: "https://github.com" },
-				{ name: "twitter", href: "https://twitter.com" },
-				{ name: "linkedin", href: "https://linkedin.com" },
-			]}
-		/>
+		<Hero />
+		<Title title="Experience" />
 		<Experience
-			title="Experience"
 			subtitle="Junior Developer Intern"
 			institution="Start Panama"
 			date="June - December 2023"
+			class="text-purple-400 mb-7"
+		/>
+		<Title title="Projects" />
+		<Project
+			href="https://sertracteorico.com"
+			subtitle="Sertracen Test"
+			info="This project is a website designed to assist people in preparing for the theoretical driving exam in Panama."
+			technologies={["html", "css", "square-js"]}
+			class="text-purple-400"
 		/>
 		<Project
-			title="Projects"
+			href="https://camiloarangoe.co/red"
 			subtitle="Filter App"
-			info="This is a Flask web application that allows users to upload photos and apply virtual tape over the eyes in the uploaded images."
-			technologies={["github", "twitter", "linkedin"]}
+			info="This is a Flask web application that allows users to upload photos and apply red tape over the eyes in the uploaded images."
+			technologies={["html", "css", "square-js", "python"]}
+			class="text-purple-400 my-7"
 		/>
+		<Project
+		href="https://camiloarango.github.io/text-encrypter/"
+		subtitle="Alura Encrypter Challenge"
+		info="This project is part of the Alura Challenge 1 and consists of a text encryptor that uses specific rules to encrypt messages."
+		technologies={["astro", "square-js", "tailwind"]}
+		class="text-purple-400 my-7"
+	/>
+		<Title title="Skills" />
+		<Skills technologies={["HTML", "CSS", "JavaScript", "React", "Astro", "NextJS", "Python", "Tailwind", "Docker", "Linux", "Flask", "PostgreSQL"]}/>
 	</main>
 </Layout>

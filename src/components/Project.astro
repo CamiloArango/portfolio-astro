@@ -2,53 +2,35 @@
 import { Icon } from "astro-icon/components";
 
 interface Props {
-	title: string;
+	href: string;
 	subtitle: string;
 	info: string;
 	technologies: string[];
+	class?: string;
 }
 
-const { title, subtitle, info, technologies } = Astro.props;
+const {href, subtitle, info, technologies, class: className } = Astro.props;
 ---
 
-<article class="text-slate-300 m-8">
-	<h2 class="text-3xl">{title}</h2>
-	<h3>{subtitle}</h3>
-	<div class="text-slate-500">
-		<p>{info}</p>
-		<ul class="flex flex-row gap-2">
-			{
-				technologies.map((technology) => (
-					<li>
-						<Icon name={technology} class="text-slate-300 text-2xl" />
-					</li>
-				))
-			}
-		</ul>
-	</div>
+<article class=`mx-8 ${className}`>
+	<a href={href}>
+		<h3>{subtitle}</h3>
+	</a>
+		<div class="text-slate-500">
+			<p>{info}</p>
+			<ul class="flex flex-row gap-2 my-1">
+				{
+					technologies.map((technology) => (
+						<li>
+							<Icon name={technology} class="text-slate-300 text-xl" />
+						</li>
+					))
+				}
+			</ul>
+		</div>
 </article>
 
 <style>
-	@font-face {
-		font-family: "Geist-Regular";
-		src: url("/fonts/Geist-Regular.woff2") format("woff2");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	@font-face {
-		font-family: "Geist-Bold";
-		src: url("/fonts/Geist-Bold.woff2") format("woff2");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	h2 {
-		font-family: "Geist-Bold", sans-serif;
-	}
-
 	h3 {
 		font-family: "Geist-Regular", sans-serif;
 	}

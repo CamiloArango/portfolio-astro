@@ -1,5 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
+import Post from "../components/Post.astro";
 ---
 
-<Layout title="blog" />
+<Layout title="blog">
+  <Title title="Blog" />
+  <Post title="Post 1" description="this is my first post for my blog"/>
+  <Post title="Post 2" description="this is my second post for my blog"/>
+  <Post title="Post 3" description="this is my third post for my blog"/>
+</Layout> 
