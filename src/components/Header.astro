@@ -11,8 +11,8 @@ const { email, tabs } = Astro.props;
 ---
 
 <article class="text-slate-300 flex flex-col m-8">
-	<h2>{email}</h2>
-	<ul class="flex flex-row">
+	<h2 class="md:mx-16 lg:mx-[25rem] 2xl:mx-[35rem]">{email}</h2>
+	<ul class="flex flex-row md:mx-16 lg:mx-[25rem] 2xl:mx-[35rem]">
 		{
 			tabs.map((tab, index) => (
 				<li>

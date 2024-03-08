@@ -6,17 +6,33 @@ interface Props {
 const { technologies } = Astro.props;
 ---
 
-<section class="m-8 text-slate-300 text-sm">
-  <ul class="grid grid-cols-3 gap-3 text-center">
+<section class="m-8">
+  <ul>
     {technologies.map((technology) => (
-      <li class="border-2 border-purple-300 rounded-xl p-1">{technology}</li>
+      <li>{technology}</li>
     ))}
   </ul>
 </section>
 
+
 <style>
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
   li {
     font-family: "Geist-Ultralight";
+    align-items: center;
+    background: #cbd5e1;
+    border-radius: 6px;
+    color: #581c87;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 600;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
   }
 </style>
 

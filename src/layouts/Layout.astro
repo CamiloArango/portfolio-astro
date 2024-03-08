@@ -12,7 +12,7 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="Explore the digital craftsmanship of a passionate full-stack developer on this portfolio site. From Colombia to Panama, discover projects that blend React, NextJS, Astro, and Python for innovative, efficient web solutions. Dive into a world where code meets creativity." />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -25,7 +25,7 @@ const { title } = Astro.props;
 					email="camiloarangoe@protonmail.com"
 					tabs={[
 						{ name: "Home", href: "/" },
-						{ name: "Photos", href: "/photos" },
+						{ name: "Photos", href: "https://photos.camiloarangoe.co" },
 					]}
 				/>
 				<slot />
@@ -39,6 +39,13 @@ const { title } = Astro.props;
   body {
     background-color: black;
   }
+
+	@media (min-width: 768px) {
+		body {
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+		}
+	}
   
 	@font-face {
 		font-family: "Geist-UltraLight";
