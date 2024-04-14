@@ -8,11 +8,17 @@ import Skills from "../components/Skills.astro";
 ---
 
 <Layout title="Camilo's Portfolio">
-	<main class="md:mx-16 lg:mx-[25rem] 2xl:mx-[35rem]">
+	<main class="md:mx-16 lg:mx-[20rem] 2xl:mx-[25rem]">
 		<Hero />
 		<Title title="Experience" />
 		<Experience
-			subtitle="Junior Developer Intern"
+			subtitle="Quality and Business Testing Assistant PFP"
+			institution="Infosgroup"
+			date="April 2024 - Present"
+			class="text-purple-400"
+		/>
+		<Experience
+			subtitle="Junior Software Developer"
 			institution="Start Panama"
 			date="June - December 2023"
 			class="text-purple-400"
@@ -33,12 +39,19 @@ import Skills from "../components/Skills.astro";
 			class="text-purple-400"
 		/>
 		<Project
-		href="https://camiloarango.github.io/text-encrypter/"
-		subtitle="Alura Encrypter Challenge"
-		info="This project is part of the Alura Challenge 1 and consists of a text encryptor that uses specific rules to encrypt messages."
-		technologies={["astro", "square-js", "tailwind"]}
-		class="text-purple-400"
-	/>
+			href="https://camiloarango.github.io/text-encrypter/"
+			subtitle="Alura Encrypter Challenge"
+			info="This project is part of the Alura Challenge 1 and consists of a text encryptor that uses specific rules to encrypt messages."
+			technologies={["astro", "square-js", "tailwind"]}
+			class="text-purple-400"
+		/>
+		<Project
+			href="https://leafti.com"
+			subtitle="Leafti"
+			info="Leafti is a personal project, I am currently working on it. Click on the link to see what is all about."
+			technologies={["astro", "square-js", "tailwind"]}
+			class="text-purple-400"
+		/>
 		<Title title="Skills" />
 		<Skills technologies={["HTML", "CSS", "JavaScript", "React", "Astro", "NextJS", "Python", "Tailwind", "Docker", "Linux", "Flask", "PostgreSQL"]}/>
 	</main>

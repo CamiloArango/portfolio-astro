@@ -12,9 +12,9 @@ const { email, tabs } = Astro.props;
 
 <article class="text-slate-300 flex flex-col m-8">
 	<a href={`mailto:${email}`}>
-		<h2 class="md:mx-16 lg:mx-[25rem] 2xl:mx-[35rem] transition-300 hover:text-slate-400">{email}</h2>
+		<h2 class="md:mx-16 lg:mx-[20rem] 2xl:mx-[25rem] transition-300 hover:text-slate-400">{email}</h2>
 	</a>
-	<ul class="flex flex-row md:mx-16 lg:mx-[25rem] 2xl:mx-[35rem]">
+	<ul class="flex flex-row md:mx-16 lg:mx-[20rem] 2xl:mx-[25rem]">
 		{
 			tabs.map((tab, index) => (
 				<li>
