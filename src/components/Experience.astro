@@ -9,7 +9,7 @@ interface Props {
 const { subtitle, institution, date, class: className } = Astro.props;
 ---
 
-<article class=`mx-8 ${className} border-2 border-purple-400 border-opacity-45 rounded-lg p-3 my-3 w-max`>
+<article class=`mx-8 ${className} border-2 border-purple-400 border-opacity-45 rounded-lg p-3 my-3 sm:w-max`>
 	<h3>{subtitle}</h3>
 	<div class="text-slate-500">
 		<h3>{institution}</h3>
